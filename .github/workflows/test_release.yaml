@@ -258,5 +258,5 @@ jobs:
       - name: Load and push metacontroller images
         run: |
           docker load --input metacontroller-dev.tar
-          kind load docker-image ghcr.io/${{github.repository}}:dev
+          docker tag metacontrollerio/metacontroller:dev ghcr.io/${{github.repository}}:dev
           docker push ghcr.io/${{github.repository}}:dev
